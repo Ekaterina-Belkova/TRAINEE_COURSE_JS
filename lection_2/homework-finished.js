@@ -107,7 +107,7 @@ console.log(result2); // 120
 // решение
 
 function getUniqArray(arr) {
-  if (!Array.isArray(arr) || arr.some(item => typeof item !== 'number')) {
+  if (!Array.isArray(arr) || arr.some(item => typeof item !== 'number') || Number.isNaN(item)) {
     throw new Error("В getUniqArray был передан невалидный параметр. Аргумент arr должен быть массивом чисел");
   } else {
     return Array.from(new Set(arr));
